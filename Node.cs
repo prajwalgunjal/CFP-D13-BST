@@ -19,5 +19,5 @@ namespace BinarySearchTree
             Right = null;
         }
     }
-}
+
 }

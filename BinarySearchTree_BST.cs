@@ -59,6 +59,31 @@ namespace BinarySearchTree
         }
 
 
+        //Inorder Traversal Method
+        public void InorderTraversal()
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            Stack<Node> stack = new Stack<Node>();
+            Node current = root;
+
+            while (current != null || stack.Count > 0)
+            {
+                while (current != null)
+                {
+                    stack.Push(current);
+                    current = current.Left;
+                }
+
+                current = stack.Pop();
+                Console.Write(current.Value + " ");
+
+                current = current.Right;
+            }
+        }
 
 
 
