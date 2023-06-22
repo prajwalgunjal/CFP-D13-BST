@@ -13,6 +13,11 @@ internal class Program
         bst.Insert(40);
         bst.Insert(60);
         bst.Insert(80);
+
+        Console.WriteLine("Searching for 40: " + bst.Search(40));  // true 
+        Console.WriteLine("Searching for 9: " + bst.Search(9)); // false
+
+
         // inorder 
         Console.WriteLine("Inorder Traversal:");
         bst.InorderTraversal();

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace BinarySearchTree
@@ -146,6 +148,31 @@ namespace BinarySearchTree
                     stack.Push(current.Left);
                 }
             }
+        }
+
+        public bool Search(int value)
+        {
+            Node current = root;
+
+            while (current != null)
+            {
+                if (value == current.Value)
+                {
+                    Console.WriteLine($"{value} is present ");
+                    return true;
+
+                }
+                else if (value < current.Value)
+                {
+                    current = current.Left;
+                }
+                else
+                {
+                    current = current.Right;
+                }
+            }
+            Console.WriteLine($"{value} is not present ");
+            return false;
         }
 
     }
