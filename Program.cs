@@ -17,9 +17,15 @@ internal class Program
         Console.WriteLine("Inorder Traversal:");
         bst.InorderTraversal();
 
+        Console.WriteLine();
         // Post order 
         Console.WriteLine("Postorder Traversal:");
         bst.PostorderTraversal();
+        Console.WriteLine();
+
+        // pre order 
+        Console.WriteLine("Preorder Traversal:");
+        bst.PreorderTraversal();
 
 
     }

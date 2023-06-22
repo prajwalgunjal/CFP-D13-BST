@@ -120,7 +120,33 @@ namespace BinarySearchTree
             }
         }
 
+        //preorder traversal
+        public void PreorderTraversal()
+        {
+            if (root == null)
+            {
+                return;
+            }
 
+            Stack<Node> stack = new Stack<Node>();
+            stack.Push(root);
+
+            while (stack.Count > 0)
+            {
+                Node current = stack.Pop();
+                Console.Write(current.Value + " ");
+
+                if (current.Right != null)
+                {
+                    stack.Push(current.Right);
+                }
+
+                if (current.Left != null)
+                {
+                    stack.Push(current.Left);
+                }
+            }
+        }
 
     }
 }
