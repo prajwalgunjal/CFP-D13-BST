@@ -62,6 +62,7 @@ namespace BinarySearchTree
 
 
         //Inorder Traversal Method
+        //left -> root -> right
         public void InorderTraversal()
         {
             if (root == null)
@@ -88,6 +89,7 @@ namespace BinarySearchTree
         }
 
         //Postorder Traversal
+        //left -> right -> root
         public void PostorderTraversal()
         {
             if (root == null)
@@ -123,6 +125,7 @@ namespace BinarySearchTree
         }
 
         //preorder traversal
+        //root -> left -> right
         public void PreorderTraversal()
         {
             if (root == null)
